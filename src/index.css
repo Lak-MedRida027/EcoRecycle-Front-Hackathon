@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #16a34a;
+}
+
+body {
+  @apply bg-gray-50 min-h-screen;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-xl;
+  }
+  h2 {
+    @apply text-lg;
+  }
+  .text-sm {
+    @apply text-xs;
+  }
+}
+
+/* Custom scrollbar for better mobile experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-500 rounded-full;
+}
+
+/* Modal responsiveness */
+.modal-container {
+  @apply w-full max-w-2xl mx-4;
+}
+
+@media (max-width: 640px) {
+  .modal-container {
+    @apply mx-2;
+  }
+}
+
+/* Form field responsiveness */
+input, select, textarea {
+  @apply w-full max-w-full;
+}
+
+/* Table responsiveness */
+.table-container {
+  @apply overflow-x-auto -mx-4 sm:mx-0;
+}
+
+@media (max-width: 640px) {
+  .table-container table {
+    @apply min-w-[600px];
+  }
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
